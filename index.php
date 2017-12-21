@@ -319,46 +319,20 @@
 
                           $registro = $totalRegistro;
                           $totalFolhas = $folha;
-
-                  // retorna a data da primeira troca
-                  $sql = "SELECT * FROM  pedido_troca, setor 
-                        WHERE pedido_troca.setor_id = setor.id
-                        AND setor.nome = 'Sala médico'
-                        ORDER BY data_troca ASC";
-
-                        $sql = $pdo->query($sql);
-                        $sql = $sql->fetch();
-
-                        $data1 = $sql['data_troca'];
-
-                  // retorna a data da ultima troca
-                  $sql = "SELECT * FROM  pedido_troca, setor 
-                        WHERE pedido_troca.setor_id = setor.id
-                        AND setor.nome = 'Sala médico'
-                        ORDER BY data_troca DESC";
-
-                        $sql = $pdo->query($sql);
-                        $sql = $sql->fetch();
-
-                        $data2 = $sql['data_troca']; 
-
-                    $dataInicial = date_create($data1);
-                    $dataFinal   = date_create($data2);
-
-                    $intervalo = date_diff($dataInicial, $dataFinal);
-                    $dias = $intervalo->format('%a');
-                    
-                    $mes = $dias / 24;
-
-                    $consumoDiaSalaMedico = $totalFolhas / $dias;
-                    $consumoMesSalaMedico = $totalFolhas / $mes;
+       
+                                             
+                          $x = $totalFolhas / $registro;
+                          $consumoDiario = $x / 24;
+                        
+                          $consumoDiaSalaMedico = $consumoDiario;
+                          $consumoMesSalaMedico = $totalFolhas / $registro;
 
                  ?>
                  <hr>
                  <img class="" src="img/printer-64.png">
                  <h5 class="texto-consumo">Consumo</h5>
                  <br>
-                 <h6>Dia: <span class="badge badge-info"><?php echo number_format($consumoDiaSalaMedico, 0, '.','.'); ?></span></h6>
+                 <h6>Folhas/Dia: <span class="badge badge-info"><?php echo number_format($consumoDiaSalaMedico, 0, '.','.'); ?></span></h6>
                  <h6>Mês: <span class="badge badge-info"><?php echo number_format($consumoMesSalaMedico, 0, '.','.'); ?></span></h6>
             </div>
           </div>
@@ -411,45 +385,19 @@
                           $registro = $totalRegistro;
                           $totalFolhas = $folha;
 
-                  // retorna a data da primeira troca
-                  $sql = "SELECT * FROM  pedido_troca, setor 
-                        WHERE pedido_troca.setor_id = setor.id
-                        AND setor.nome = 'Recepcao'
-                        ORDER BY data_troca ASC";
-
-                        $sql = $pdo->query($sql);
-                        $sql = $sql->fetch();
-
-                        $data1 = $sql['data_troca'];
-
-                  // retorna a data da ultima troca
-                  $sql = "SELECT * FROM  pedido_troca, setor 
-                        WHERE pedido_troca.setor_id = setor.id
-                        AND setor.nome = 'Recepcao'
-                        ORDER BY data_troca DESC";
-
-                       $sql = $pdo->query($sql);
-                        $sql = $sql->fetch();
-
-                        $data2 = $sql['data_troca']; 
-
-                    $dataInicial = date_create($data1);
-                    $dataFinal   = date_create($data2);
-
-                    $intervalo = date_diff($dataInicial, $dataFinal);
-                    $dias = $intervalo->format('%a');
                     
-                    $mes = $dias / 24;
+                     $x = $totalFolhas / $registro;
+                     $consumoDiario = $x / 24;
 
-                    $consumoDiaRecepcao = $totalFolhas / $dias;
-                    $consumoMesRecepcao = $totalFolhas / $mes;
+                    $consumoDiaRecepcao = $consumoDiario;
+                    $consumoMesRecepcao = $totalFolhas / $registro;
 
                  ?>
                  <hr>
                  <img class="" src="img/printer-64.png">
                  <h5 class="texto-consumo">Consumo</h5>
                  <br>
-                 <h6>Dia: <span class="badge badge-info"><?php echo number_format($consumoDiaRecepcao, 0, '.','.'); ?></span></h6>
+                 <h6>Folhas/Dia: <span class="badge badge-info"><?php echo number_format($consumoDiaRecepcao, 0, '.','.'); ?></span></h6>
                  <h6>Mês: <span class="badge badge-info"><?php echo number_format($consumoMesRecepcao, 0, '.','.'); ?></span></h6>
             </div>
           </div>
@@ -528,17 +476,18 @@
                     $intervalo = date_diff($dataInicial, $dataFinal);
                     $dias = $intervalo->format('%a');
                     
-                    $mes = $dias / 24;
+                    $x = $totalFolhas / $registro;
+                    $consumoDiario = $x / 24;
 
-                    $consumoDiaAdmin = $totalFolhas / $dias;
-                    $consumoMesAdmin = $totalFolhas / $mes;
+                    $consumoDiaAdmin = $consumoDiario;
+                    $consumoMesAdmin = $totalFolhas / $registro;
 
                  ?>
                  <hr>
                  <img class="" src="img/printer-64.png">
                  <h5 class="texto-consumo">Consumo</h5>
                  <br>
-                 <h6>Dia: <span class="badge badge-info"><?php echo number_format($consumoDiaAdmin, 0, '.','.'); ?></span></h6>
+                 <h6>Folhas/Dia: <span class="badge badge-info"><?php echo number_format($consumoDiaAdmin, 0, '.','.'); ?></span></h6>
                  <h6>Mês: <span class="badge badge-info"><?php echo number_format($consumoMesAdmin, 0, '.','.'); ?></span></h6>
             </div>
           </div>

@@ -3,7 +3,7 @@
    <br>
    <div class="row">
     <div class="alert alert-warning" role="alert">
-      Ultima atualização: 22/11/2017
+      Ultima atualização: 21/12/2017
     </div>
    </div>
   </div>       
