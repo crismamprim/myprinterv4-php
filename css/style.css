@@ -1,0 +1,105 @@
+body{
+	background-color:;
+}
+
+.btn-group{
+	margin-left: 5px;
+}
+
+.card-title{
+    margin-right: -8px;
+    margin-top: -50px;
+    text-align: right;
+    font-size: 20px;
+    color: #00477e;
+}
+
+.titulo{
+  text-align: right;
+  color: #00477e;
+
+  margin-top: -58px;
+  margin-right: -8px;
+}
+
+.title-branco{
+    color: #FAFAFA;
+}
+
+.etiqueta__total{
+	margin-top: -10px;
+	margin-right: -7px;
+
+	text-align: right;
+	font-weight: bold;
+	font-size: 20px;
+	color: #008856;
+
+}
+
+.texto-branco{
+	color: #FFFFFF;
+
+}
+
+.etiqueta__data__nova{
+	margin-top: 35px;
+	margin-right: -7px;
+
+	text-align: right;
+	font-weight: bold;
+	font-size: 12px;
+	color: 	#be0032;
+}
+
+.alert-font-size{
+	font-size: 12px;
+}
+
+.material-icons.vivid-blue{
+	color: #00a1c2;
+}
+
+.material-icons.vivid-red{
+	color: #be0032;
+}
+
+.linha-hr-consumo-geral{
+	background-color: #FFFFFF;
+}
+
+.hora-data-sistema{
+	float: right;
+	margin-right: 20px;
+}
+
+
+.texto-media{
+	margin-top: -40px;
+
+    text-align: right;
+    font-size: 20px;
+    color: #00477e;
+}
+
+.texto-consumo{
+	margin-top: -48px;
+
+    text-align: right;
+    font-size: 20px;
+    color: #00477e;
+}
+
+.texto-consumo-geral{
+	margin-top: -48px;
+
+    text-align: right;
+    font-size: 20px;
+}
+
+
+
+.layout-rodape{
+    height: 100px;
+    background-color: #307CCB;
+}
