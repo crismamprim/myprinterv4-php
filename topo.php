@@ -19,6 +19,8 @@
            <hr>
           <a class="dropdown-item" href="consulta.php?datainicial=0000-00-00&datafinal=0000-00-00&setor=">Consultar recargas</a>
           <a class="dropdown-item" href="consultaCompra.php?datainicial=0000-00-00&datafinal=0000-00-00&fornecedor=">Consultar compra</a>
+            <hr>
+          <a class="dropdown-item" href="logout.php?">Sair</a>
         </div>
       </div>
 </nav>

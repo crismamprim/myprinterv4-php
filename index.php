@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  
+    if (isset($_SESSION['id']) && empty($_SESSION['id']) == false) {
+        echo "Area restrita";
+    }else{
+      header("location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,13 +20,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   </head>
+
     <?php
       setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
       date_default_timezone_set('America/Sao_Paulo');
     ?>
 
   <body>
-       
+
    <?php include_once "topo.php"; ?>
 
       <div class="modal fade" id="cadastarTroca">
@@ -524,8 +535,8 @@
 
                 <hr class="linha-hr-consumo-geral">
                 <?php
-                  $consumoGeralDia = $consumoDiaAdmin + $consumoDiaRecepcao + $consumoDiaSalaMedico;
-                  $consumoGeralMes = $consumoMesAdmin + $consumoMesRecepcao + $consumoMesSalaMedico;
+                  $consumoGeralDia = ($consumoDiaAdmin + $consumoDiaRecepcao + $consumoDiaSalaMedico);
+                  $consumoGeralMes = ($consumoMesAdmin + $consumoMesRecepcao + $consumoMesSalaMedico);
                   
                  ?>
                  <img class="" src="img/printer-64-branca.png">

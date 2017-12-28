@@ -32,7 +32,7 @@ comentarios
 
             try{
                $pdo = new PDO($dsn, $dbuser, $dbpass);
-                    echo "<span class='badge badge-light'>On-Line</span>";
+                  //  echo "<span class='badge badge-light'>On-Line</span>";
             }catch(PDOException $erro){
                     echo "<span class='alert alert-success'>Sistema indisponivel no momento</span>";
                    // echo $erro->getMessage();
