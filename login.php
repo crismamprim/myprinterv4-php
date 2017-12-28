@@ -44,13 +44,17 @@
 
   <body>
   	<div class="topo">
-  		
+  		<h2 class="p-5 mb-2 bg-dark text-white"></h2>
   	</div>
+  	<br>
+  	<br>
   	<div class="container-fluid">
   		<div class="row">
   			<div class="col-md-4">
   			</div>
   			<div class="col-md-4">
+  				<h2 class="text-info text-center">Faça o Login</h2>
+  				<br>
   				<form class="container" id="needs-validation" novalidate method="POST">
 				  <div class="form-grou">
 				    <label for="email">Email</label>
@@ -58,7 +62,7 @@
 				
 				  </div>
 				  <div class="form-group">
-				    <label for="Senha">Password</label>
+				    <label for="senha">Senha</label>
 				    <input type="password" class="form-control" name="senha" placeholder="Senha" required>
 				 
 				  </div>
