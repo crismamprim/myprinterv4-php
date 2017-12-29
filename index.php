@@ -2,7 +2,7 @@
   session_start();
   
     if (isset($_SESSION['id']) && empty($_SESSION['id']) == false) {
-        echo "Area restrita";
+      //  echo "Area restrita";
     }else{
       header("location: login.php");
     }
